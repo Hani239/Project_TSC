@@ -1,5 +1,6 @@
 'use client'
-
+import Image from 'next/image'
+import profile from '@/image/profile1.jpg'
 import { useEffect, useState } from 'react';
 
 const FetchData = () => {
@@ -32,9 +33,9 @@ const FetchData = () => {
   return (
     <div>
       <div>
-        {data.map(item => (
+        {/* {data.map(item => (
           <li key={item.id}>{item.title}</li>
-        ))}
+        ))} */}
       </div>
 
       <div className='flex justify-center items-center h-screen gap-5 bg-[#F2FAFB]'>
@@ -44,14 +45,14 @@ const FetchData = () => {
               <Image src={profile} height={80} width={80} alt={'profile'} className='border-2 rounded-full' />
             </div>
             <div className='flex flex-col'>
-              {/* <div className='flex text-[#6F9E9A] font-bold'>Photosnap</div> */}
+              <div className='flex text-[#6F9E9A] font-bold'>Photosnap</div>
               {data.map(item => (
                 <li className='flex text-[#6F9E9A] font-bold' key={item.id}>{item.company}</li>
               ))}
-              {/* <div className='flex font-bold'>Senior Frontend Developer</div> */}
-              {data.map(item => (
+              <div className='flex font-bold'>Senior Frontend Developer</div>
+              {/* {data.map(item => (
                 <li className='flex font-bold' key={item.id}>{item.title}</li>
-              ))}
+              ))} */}
               <div className='flex text-[#868E8D] font-medium w-full gap-3'>
                 <div className='text-sm'>1d ago</div>
                 <div className='text-sm'>Full time</div>
